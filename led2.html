@@ -4,29 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Automation Ststem</title>
+    <title>Night Bulb</title>
+    <script src="ip.js"></script>
     <link rel="stylesheet" href="led2.css">
     <link rel="stylesheet" media="screen and (max-width: 1170px)" href="phone.css">
 </head>
 <body>
     <h1 class="door">
-       Night Lamp Status
+       Night Bulb Status
     </h1>
     <div class="container">
     <div class="button_on">
-          <a href="index.html">
-            <button class="button_on">
-              ON
-            </button>
-          </a>
+      <script>
+        let loc = "http://"+ip;
+        let action = "/bulb_on";
+        document.write('<a href="' + loc + '' + action + '"><button class="button_on">ON</button>');
+      </script>
     </div>
     <div class="sps">    </div>
     <div class="button_off">
-      <a href="index.html">
-        <button class="button_off">
-          OFF
-        </button>
-      </a>
+      <script>
+        let loc2 = "http://"+ip;
+        let action2 = "/bulb_off";
+        document.write('<a href="' + loc2 + '' + action2 + '"><button class="button_off">OFF</button>');
+      </script>
 </div>
     </div>
 </body>

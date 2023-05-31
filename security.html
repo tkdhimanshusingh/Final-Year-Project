@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Automation System</title>
+    <title>Security</title>
+    <script src="ip.js"></script>
     <link rel="stylesheet" href="security.css">
     <link rel="stylesheet" media="screen and (max-width: 1000px)" href="phone.css">
 </head>
@@ -17,12 +18,12 @@
             <div class="box">
                 <img src="cctv.jpg" alt="cctv">
                 <h2 class="h-secondry center">
-                    <a href="cctv.html">
-                      <button class="button_on">
-                        Camera Status
-                      </button>
-                    </a>
-                    </h2>
+                  <script>
+                    let loc = "http://"+ip;
+                    let action = "/mjpeg/1";
+                    document.write('<a href="' + loc + '' + action + '"><button class="button_on">Camera Status</button>');
+                  </script>
+                </h2>
             </div>
             <div class="box">
                 <img src="door.png" alt="door">

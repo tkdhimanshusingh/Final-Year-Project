@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Automation Ststem</title>
+    <script src="ip.js"></script>
     <link rel="stylesheet" href="safety.css">
     <link rel="stylesheet" media="screen and (max-width: 1000px)" href="phone.css">
 </head>
@@ -17,23 +18,23 @@
             <div class="box">
                 <img src="lpg.jpg" alt="lpg">
                 <h2 class="h-secondry center">
-                    <a href="Gas_Ok.html">
-                      <button class="button_on">
-                        LPG Gas Status
-                      </button>
-                    </a>
-                    </h2>
+                  <script>
+                    let loc = "http://"+ip;
+                    let action = "/gas_status";
+                    document.write('<a href="' + loc + '' + action + '"><button class="button_on">LPG Gas Status</button>');
+                  </script>
+                </h2>
             </div>
             <div class="box">
-                <img src="temp.jpg" alt="Temperature">
-                <h2 class="h-secondry center">
-                    <a href="Heat_Ok.html">
-                      <button class="button_on">
-                        Temperature Status
-                      </button>
-                    </a>
-                    </h2>
-            </div>
+              <img src="temp.jpg" alt="Temperature">
+              <h2 class="h-secondry center">
+                <script>
+                  let loc1 = "http://"+ip;
+                  let action2 = "/temp_status";
+                  document.write('<a href="' + loc1 + '' + action2 + '"><button class="button_on">Temperature Status</button>');
+                </script>
+              </h2>
+          </div>
         </div>
     </section>
 </body>
